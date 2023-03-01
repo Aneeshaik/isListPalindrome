@@ -12,11 +12,11 @@
         public Node midList(Node head){
             Node hare = head;
             Node turtle = head;
-            while(turtle != null && turtle.next != null){
-                hare = hare.next;
-                turtle = turtle.next.next;
+            while(hare != null && hare.next != null){
+                hare = hare.next.next;
+                turtle = turtle.next;
             }
-            return hare;
+            return turtle;
         }
         public boolean isPalindrome(Node head){
             if(head == null  || head.next == null){
